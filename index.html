@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="he" dir="rtl">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Priority Pilot - דף הבית</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <div class="app-container">
+        <header>
+            <h1>לוח בקרה יומי: 25 באפריל</h1>
+        </header>
+
+        <div class="energy-section">
+            <p>רמת אנרגיה (היום): ⚡ 75%</p>
+            <div class="energy-bar-bg">
+                <div class="energy-bar-fill" style="width: 75%;"></div>
+            </div>
+        </div>
+
+        <section class="task-list">
+            <h3>רשימת משימות</h3>
+            <div class="task-item">
+                <input type="checkbox" checked>
+                <span>08:30 - סריקת סילבוס</span>
+            </div>
+            <div class="task-item">
+                <input type="checkbox">
+                <span>10:00 - תרגול מתמטיקה</span>
+            </div>
+
+            <button class="add-task">+</button>
+        </section>
+
+        <nav class="bottom-nav">
+            <button class="active" onclick="location.href='index.html'">🏠<br>בית</button>
+            <button onclick="location.href='calendar.html'">📅<br>יומן</button>
+            <button onclick="location.href='stats.html'">📊<br>מדדים</button>
+            <button onclick="location.href='settings.html'">⚙️<br>הגדרות</button>
+        </nav>
+
+        <script>
+            // חיבור כפתור ה-"+" לעמוד העריכה
+            const addButton = document.querySelector('.add-task');
+            if (addButton) {
+                addButton.addEventListener('click', () => {
+                    window.location.href = 'task-edit.html';
+                });
+            }
+        </script>
+    </div>
+</body>
+
+</html>
