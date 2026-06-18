@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="he" dir="rtl">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>הגדרות - Priority Pilot</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <div class="app-container">
+        <header>
+            <h1>הגדרות</h1>
+        </header>
+
+        <div class="settings-list">
+            <div class="setting-item" onclick="location.href='general-settings.html'">
+                <div class="setting-info">
+                    <span>⚙️</span>
+                    <span>העדפות כלליות</span>
+                </div>
+                <span class="arrow">‹</span>
+            </div>
+
+            <div class="setting-item" onclick="location.href='energy-hours.html'">
+                <div class="setting-info">
+                    <span>⚡</span>
+                    <span>שעות אנרגיה</span>
+                </div>
+                <span class="arrow">‹</span>
+            </div>
+
+            <div class="setting-item">
+                <div class="setting-info">
+                    <span>🔔</span>
+                    <span>התראות</span>
+                </div>
+                <label class="switch">
+                    <input type="checkbox" checked>
+                    <span class="slider"></span>
+                </label>
+            </div>
+
+            <div class="setting-item" onclick="location.href='calendar-sync.html'">
+                <div class="setting-info">
+                    <span>📅</span>
+                    <span>חיבור יומנים</span>
+                </div>
+                <span class="arrow">‹</span>
+            </div>
+        </div>
+
+        <button class="primary-btn" onclick="location.href='login.html'">📲 התנתק</button>
+<nav class="bottom-nav">
+            <button onclick="location.href='/index.html'">🏠<br>בית</button>
+            <button onclick="location.href='/calendar.html'">📅<br>יומן</button>
+            <button onclick="location.href='/stats.html'">📊<br>מדדים</button>
+            <button class="active" onclick="location.href='/settings.html'">⚙️<br>הגדרות</button>
+        </nav>
+    </div>
+
+</body>
+
+</html>

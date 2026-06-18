@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="he" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Priority Pilot - Dashboard</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="app-container">
+        <header>
+            <h1>לוח בקרה יומי: 25 באפריל</h1>
+            <div class="energy-status">
+                <span>רמת אנרגיה (היום): ⚡ 75%</span>
+                <div class="progress-bar"><div class="progress" style="width: 75%;"></div></div>
+            </div>
+        </header>
+        <section class="task-list">
+            <h3>רשימת משימות</h3>
+            <div class="task-item checked">
+                <input type="checkbox" checked> 08:30 - סריקת סילבוס
+            </div>
+            <div class="task-item">
+                <input type="checkbox"> 10:00 - תרגול מתמטיקה
+            </div>
+            <div class="task-item">
+                <input type="checkbox"> 14:00 - כתיבת דוח
+            </div>
+            <button class="add-task">+</button>
+        </section>
+        <nav class="bottom-nav">
+            <button class="active">בית</button>
+            <button>יומן</button>
+            <button>סטטיסטיקה</button>
+            <button onclick="location.href='settings.html'">פרופיל</button>
+        </nav>
+    </div>
+</body>
+</html>
