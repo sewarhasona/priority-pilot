@@ -1,4 +1,25 @@
-import './index.css';
+:root {
+  --bg-page: #ffffff;
+  --bg-card: #f8fafc;
+  --bg-input: #ffffff;
+  --text-primary: #1e293b;
+  --text-secondary: #64748b;
+  --text-muted: #94a3b8;
+  --border: #e2e8f0;
+  --border-light: #f1f5f9;
+}
+
+[data-theme="dark"] {
+  --bg-page: #0f172a;
+  --bg-card: #1e293b;
+  --bg-input: #334155;
+  --text-primary: #f1f5f9;
+  --text-secondary: #94a3b8;
+  --text-muted: #64748b;
+  --border: #334155;
+  --border-light: #1e293b;
+}
+
 /* עיצוב בסיסי לכל הדף */
 * {
     box-sizing: border-box;
@@ -19,14 +40,14 @@ body {
 .app-container {
     width: 100%;
     max-width: 400px;
-    background-color: white;
+    background-color: var(--bg-page);
+    color: var(--text-primary);
     min-height: 100vh;
     position: relative;
     padding: 20px;
     box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
     direction: rtl;
     padding-bottom: 100px;
-    /* רווח לתפריט התחתון שלא יסתיר תוכן */
 }
 
 /* עיצוב כותרות */
@@ -116,11 +137,11 @@ h1 {
     bottom: 0;
     width: 100%;
     max-width: 400px;
-    background: white;
+    background: var(--bg-page);
     display: flex;
     justify-content: space-around;
     padding: 15px 0;
-    border-top: 1px solid #eee;
+    border-top: 1px solid var(--border);
     z-index: 1000;
 }
 
@@ -130,7 +151,7 @@ h1 {
     cursor: pointer;
     text-align: center;
     font-size: 11px;
-    color: #64748b;
+    color: var(--text-secondary);
 }
 
 .bottom-nav button.active {
@@ -193,8 +214,8 @@ input:checked+.slider:before {
 }
 
 .stat-card {
-    background: #f8fafc;
-    border: 1px solid #e2e8f0;
+    background: var(--bg-card);
+    border: 1px solid var(--border);
     border-radius: 15px;
     padding: 18px;
     text-align: center;
@@ -208,12 +229,12 @@ input:checked+.slider:before {
 .stat-value {
     font-size: 26px;
     font-weight: bold;
-    color: #1e293b;
+    color: var(--text-primary);
 }
 
 .stat-label {
     font-size: 13px;
-    color: #64748b;
+    color: var(--text-secondary);
     margin-top: 4px;
 }
 
@@ -237,4 +258,9 @@ input:checked+.slider:before {
     font-size: 14px;
     margin-top: -10px;
     margin-bottom: 10px;
+    /* הוספה בסוף קובץ ה-CSS */
+body.dark-mode { background-color: #0f172a; }
+body.dark-mode .app-container { background-color: #1e293b; color: white; }
+body.dark-mode h1, body.dark-mode h3 { color: #f8fafc; }
+body.dark-mode .setting-item { background: #334155; border-color: #475569; }
 }

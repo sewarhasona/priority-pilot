@@ -1,15 +1,7 @@
-import React, { useEffect, useState } from 'react';
-import { supabase } from '../lib/supabaseClient';
+import { useTasks } from '../context/TasksContext';
 
 export default function StatsPage() {
-  const [tasks, setTasks] = useState([]);
-
-  useEffect(() => {
-    // כאן בעתיד תוכלי לשלוף נתונים אמיתיים מ-Supabase
-    // בינתיים השארתי את הלוגיקה של ה-localStorage כפי שהייתה לך
-    const stored = localStorage.getItem('pp_tasks');
-    if (stored) setTasks(JSON.parse(stored));
-  }, []);
+  const { tasks } = useTasks();
 
   const total = tasks.length;
   const done = tasks.filter(t => t.done).length;
@@ -51,6 +43,22 @@ export default function StatsPage() {
         <div className="energy-bar-bg" style={{ marginTop: '12px' }}>
           <div className="energy-bar-fill" style={{ width: `${rate}%` }}></div>
         </div>
+      </section>
+
+      <section style={{ marginTop: '24px' }}>
+        <h3>רשימת המשימות</h3>
+        {tasks.length === 0 ? (
+          <p style={{ color: '#94a3b8', marginTop: '10px' }}>אין משימות עדיין.</p>
+        ) : (
+          tasks.map(task => (
+            <div key={task.id} style={{ display: 'flex', alignItems: 'center', gap: '10px', padding: '10px 0', borderBottom: '1px solid #eee' }}>
+              <span style={{ fontSize: '16px' }}>{task.done ? '✅' : '⏳'}</span>
+              <span style={{ textDecoration: task.done ? 'line-through' : 'none', color: task.done ? '#94a3b8' : '#1e293b', fontSize: '14px' }}>
+                {task.text}
+              </span>
+            </div>
+          ))
+        )}
       </section>
     </div>
   );
