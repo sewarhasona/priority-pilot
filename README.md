@@ -15,8 +15,8 @@ Study Sessions
 זהו קובץ מצורף עם הצילום מסך של תרשים ה-ERD
 <img width="950" height="472" alt="צילום מסך 2026-06-17 215416" src="https://github.com/user-attachments/assets/f89187e5-f6cb-4806-9ab5-f00ef9574a5c" />
 זו תמונה לטבלת הפירוט של רשימת השירותים החיצוניים והאינטגרציות, היא גם מצורפת לקובץ שאני מגישה בסוף
-<img width="383" height="288" alt="image" src="https://github.com/user-attachments/assets/b693e137-c953-4ca4-b0fc-5c775a026421" />
+<img width="383" height="288" alt="image" src="https://github.com/user-attachments/assets/b693e137-c953-4ca4-b0fc-5c775a026421" /> 
 
-כלי פיתוח (Build Tool)
-הידור וניהול סביבת העבודה של React לפיתוח מהיר
 
+כל)
+הידור וניהול סביבת העבודה של React לפיתוח מ
